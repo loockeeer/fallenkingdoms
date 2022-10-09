@@ -1,0 +1,37 @@
+main: fr.loockeeer.fallenkingdoms.FallenKingdoms
+name: FallenKingdoms
+version: 0.0.1
+description: Plugin pour gérer une partie de FallenKingdoms
+api-version: 1.17
+load: STARTUP
+author: loockeeer
+prefix: FallenKingdoms
+commands:
+  fkinvsee:
+    description: "Permet de voir l'inventaire d'un joueur"
+    permission: fk.admin
+    permission-message: "Vous devez être administrateur pour faire cela"
+    usage: "Utilisation : /<command> [player]"
+
+  fkstart:
+    description: "Permet de démarrer la partie"
+    permission: fk.admin
+    permission-message: "Vous devez être administrateur pour faire cela"
+    usage: "Utilisation : /<command>"
+
+  fknext:
+    description: "Permet de passer au jour suivant / à un jour choisi"
+    permission: fk.admin
+    permission-message: "Vous devez être administrateur pour faire cela"
+    usage: "Utilisation : /<command>"
+
+permissions:
+  fallenkingdoms.*:
+    description: "Donne l'acces à toutes les commandes westerosrp"
+    children:
+      - fk.admin
+      - fk.player
+  fk.admin:
+    description: "Les commandes admin de westerosrp utilisent cette permission"
+  fk.player:
+    description: "Les commandes joueur de westerosrp utilisent cette permission"
